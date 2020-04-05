@@ -8,6 +8,7 @@
 <% end %>
 <p id="notice"><%= notice %></p>
 
+<% if user_signed_in? %>
 <h1>Todos</h1>
 
 <table>
@@ -41,3 +42,4 @@
 <br>
 
 <%= link_to 'New Todo', new_todo_path %>
+<% end %>
