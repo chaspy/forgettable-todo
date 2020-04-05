@@ -23,7 +23,7 @@
 
   <tbody>
     <% @todos.each do |todo| %>
-      <% if todo.user_id == current_user.id %>
+      <% if todo.user_id == current_user.id && !todo.finished %>
         <tr>
           <td><%= todo.title %></td>
           <td><%= todo.description %></td>
