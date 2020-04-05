@@ -9,6 +9,23 @@
 <p id="notice"><%= notice %></p>
 
 <% if user_signed_in? %>
+
+<h1>Add Todo</h1>
+
+<%= form_for @todo do |t| %>
+  <p class="form-group field">
+    <%= t.label :title, class: "control-label" %>
+    <%= t.text_field :title, id: :title %>
+  </p>
+  <p class="form-group field">
+    <%= t.label :description, class: "control-label" %>
+    <%= t.text_area :description, id: :description %>
+  </p>
+  <p>
+    <%= t.submit "Create", class: "btn btn-primary" %>
+  </p>
+<% end %>
+
 <h1>Todos</h1>
 
 <table>
@@ -34,7 +51,4 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Todo', new_todo_path %>
 <% end %>
