@@ -31,6 +31,7 @@
 <table>
   <thead>
     <tr>
+      <th>Created At</th>
       <th>Title</th>
       <th>Description</th>
       <th colspan="3"></th>
@@ -41,6 +42,7 @@
     <% @todos.each do |todo| %>
       <% if todo.user_id == current_user.id && !todo.finished %>
         <tr>
+          <td><%= todo.created_at %></td>
           <td><%= todo.title %></td>
           <td><%= todo.description %></td>
           <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
