@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: %i(github)
+  has_many :todos, dependent: :destroy
 
   def self.create_unique_string
     SecureRandom.uuid
