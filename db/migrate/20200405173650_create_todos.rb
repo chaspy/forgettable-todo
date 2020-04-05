@@ -4,7 +4,7 @@ class CreateTodos < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :description
       t.integer :user_id
-      t.bool :finished
+      t.boolean:finished
 
       t.timestamps
     end
