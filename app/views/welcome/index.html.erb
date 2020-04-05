@@ -45,7 +45,7 @@
           <td><%= todo.created_at %></td>
           <td><%= todo.title %></td>
           <td><%= todo.description %></td>
-          <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
+          <td><%= link_to 'Done', todo, method: :put %></td>
           <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
