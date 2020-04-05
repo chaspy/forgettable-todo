@@ -1,5 +1,17 @@
 <h1>New Todo</h1>
 
-<%= render 'form', todo: @todo %>
+<%= form_for @todo do |t| %>
+  <p class="form-group field">
+    <%= t.label :title, class: "control-label" %>
+    <%= t.text_field :title, id: :title %>
+  </p>
+  <p class="form-group field">
+    <%= t.label :description, class: "control-label" %>
+    <%= t.text_area :description, id: :description %>
+  </p>
+  <p>
+    <%= t.submit "Create", class: "btn btn-primary" %>
+  </p>
+<% end %>
 
 <%= link_to 'Back', todos_path %>
