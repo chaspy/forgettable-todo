@@ -1,5 +1,9 @@
 <h1>Forgettable TODO</h1>
 
+<section>
+  <%= javascript_pack_tag 'hello_react' %>
+</section>
+
 <p><%= notice %><%= alert %></p>
 <% if user_signed_in? %>
   <%= link_to "Logout", destroy_user_session_path, method: :delete %>
