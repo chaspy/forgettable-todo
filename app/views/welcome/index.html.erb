@@ -40,7 +40,7 @@
 
   <tbody>
     <% @todos.each do |todo| %>
-      <% if todo.user_id == current_user.id && !todo.finished && Time.zone.now - @todos[0].created_at < 691200 %>
+      <% if todo.list_valid_todos(current_user) %>
         <tr>
           <td><%= todo.created_at %></td>
           <td><%= todo.title %></td>
