@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    @todos = Todo.all
+    @todos = Todo.where(user_id: current_user.id)
     @todo = Todo.new
   end
 end
