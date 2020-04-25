@@ -4,8 +4,10 @@ class TodosController < ApplicationController
   # GET /todos
   # GET /todos.json
   def index
-    @todos = Todo.where(user_id: current_user.id)
-    @todo = Todo.new
+    if current_user
+      @todos = Todo.where(user_id: current_user.id)
+      @todo = Todo.new
+    end
   end
 
   # GET /todos/1
