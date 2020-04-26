@@ -1,5 +1,6 @@
 <h1>Forgettable TODO</h1>
 
+
 <p><%= notice %><%= alert %></p>
 <% if user_signed_in? %>
   <%= link_to "Logout", destroy_user_session_path, method: :delete %>
@@ -53,4 +54,11 @@
   </tbody>
 </table>
 
+<% end %>
+
+<!-- React -->
+<% if user_signed_in? %>
+<section>
+  <%= javascript_pack_tag 'hello_react' %>
+</section>
 <% end %>
