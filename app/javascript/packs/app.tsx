@@ -1,17 +1,14 @@
 import React, { Component } from 'react'
+import * as React from 'react'
 
-
+import TodoComponent from '../components/TodoComponent'
 
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
       <>
-        <p>Hello</p>
+        <TodoComponent onClickAddButton={(e) => { console.log(e) }} />
       </>
     )
   }
