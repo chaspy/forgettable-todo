@@ -1,9 +1,14 @@
 <h1>Forgettable TODO</h1>
 
+
+<% if user_signed_in? %>
 <section>
   <%= javascript_pack_tag 'hello_react' %>
 </section>
-
+<% else %>
+  <%= link_to 'Sign up with GitHub', user_github_omniauth_authorize_path %>
+<% end %>
+<!--
 <p><%= notice %><%= alert %></p>
 <% if user_signed_in? %>
   <%= link_to "Logout", destroy_user_session_path, method: :delete %>
@@ -58,3 +63,4 @@
 </table>
 
 <% end %>
+-->
