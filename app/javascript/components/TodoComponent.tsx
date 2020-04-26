@@ -44,7 +44,7 @@ class TodoComponent extends Component<IProps, IState> {
     const { text, todos } = this.state;
     return (
       <>
-        <h1>Todo Lists</h1>
+        <h1>Todo Lists [React View]</h1>
 
         <h2>Form</h2>
         <input type="text" value={text} onChange={e => { this.onTextChange(e) }} />
