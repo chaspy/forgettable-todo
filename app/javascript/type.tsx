@@ -11,6 +11,4 @@ export type Request = {
     title: string
     description: string
     finished: Boolean
-    created_at: Date
-    updated_at: Date
 }
