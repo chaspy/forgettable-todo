@@ -1,6 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from './app.tsx'
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import App from './app'
 
 interface HelloProps {
   name: string;
