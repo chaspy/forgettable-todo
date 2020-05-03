@@ -1,5 +1,5 @@
-export type Authorized = {
-  doneAuthorized: Boolean
+export type UserAuthorized = {
+  status: Boolean
 }
 
 export type Task = {
