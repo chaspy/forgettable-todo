@@ -1,5 +1,5 @@
 class TodosController < ApplicationController
-  before_action :set_todo, only: [:show, :edit, :update, :destroy], except: [:auth_check]
+  before_action :set_todo, only: [:show, :edit, :update, :destroy]
 
   # GET /todos
   # GET /todos.json
