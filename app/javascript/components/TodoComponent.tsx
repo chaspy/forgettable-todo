@@ -1,6 +1,9 @@
 import { Component } from 'react'
 import * as React from 'react'
 
+import check_authorized from '../api/auth'
+import { UserAuthorized } from '../type'
+
 interface IProps {
   onClickAddButton: (todo: string) => void
 
@@ -9,8 +12,8 @@ interface IProps {
 interface IState {
   todos: string[];
   text: string;
+  status: Boolean
 }
-
 
 class TodoComponent extends Component<IProps, IState> {
   constructor(props: any) {
@@ -18,9 +21,24 @@ class TodoComponent extends Component<IProps, IState> {
 
     this.state = {
       text: '',
-      todos: []
+      todos: [],
+      status: false
     }
   }
+
+  componentWillMount = () => {
+    const URL = window.location.href + 'users/auth_check'
+
+    // FIXME : type:any
+    const result: any = check_authorized(URL)
+    console.log(result)
+
+    this.setState({
+      status: result.status
+    })
+
+  }
+
 
 
   private onTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
