@@ -27,8 +27,7 @@ class TodoComponent extends Component<IProps, IState> {
   }
 
   componentWillMount = () => {
-    const URL = 'http://localhost:3000/users/auth_check'
-
+    const URL = window.location.href + 'users/auth_check'
 
     // FIXME : type:any
     const result: any = check_authorized(URL)
