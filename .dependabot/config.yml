@@ -1,0 +1,10 @@
+# ref: https://dependabot.com/docs/config-file/
+version: 1
+update_configs:
+  - directory: "."
+    package_manager: "ruby:bundler"
+    update_schedule: "daily"
+
+  - directory: "."
+    package_manager: "javascript"
+    update_schedule: "weekly"
