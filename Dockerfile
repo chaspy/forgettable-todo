@@ -21,7 +21,6 @@ COPY package.json /myapp
 COPY yarn.lock /myapp
 
 RUN yarn install
-RUN yarn upgrade
 
 COPY . /myapp
 
