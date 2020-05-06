@@ -7,6 +7,11 @@ class TodosController < ApplicationController
     if current_user
       @todos = Todo.where(user_id: current_user.id)
       @todo = Todo.new
+
+      respond_to do |format|
+        format.html
+        format.json { render json: @todos }
+      end
     end
   end
 
