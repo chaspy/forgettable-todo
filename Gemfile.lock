@@ -238,7 +238,6 @@ DEPENDENCIES
   capybara (>= 2.15)
   devise
   jbuilder (~> 2.7)
-  listen (>= 3.0.5, < 3.3)
   omniauth
   omniauth-github
   pg (>= 0.18, < 2.0)
