@@ -5,7 +5,7 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
 
 RUN apt-get update -qq && \
     apt-get install -y --no-install-recommends \
-      nodejs \
+      nodejs=10.19.0~dfsg1-1 \
       postgresql-client \
       yarn
 
