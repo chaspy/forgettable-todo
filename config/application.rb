@@ -15,17 +15,5 @@ module ForgettableTodo
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
-
-    # CORS
-    config.middleware.insert_before 0, Rack::Cors do
-      allow do
-        origins "localhost:3000","herokuapp.com"
-        resource "*",
-          headers: :any,
-          methods: [:get, :patch, :put, :delete, :post, :options],
-          credentials: true
-      end
-    end
-
   end
 end
