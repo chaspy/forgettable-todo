@@ -84,5 +84,3 @@ test:
 production:
   <<: *default
   database: forgettable_todo_production
-  username: forgettable_todo
-  password: <%= ENV['FORGETTABLE_TODO_DATABASE_PASSWORD'] %>
