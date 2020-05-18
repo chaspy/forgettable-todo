@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import * as React from 'react'
 
-import TodoComponent from '../components/TodoComponent'
+import TodoComponent from './components/TodoComponent'
 
 
 class App extends Component {
