@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <TodoComponent onClickAddButton={(e) => { console.log(e) }} />
+        <TodoComponent onClickAddButton={(e) => { console.log(e); }} />
       </>
     )
   }
