@@ -5,7 +5,9 @@ set -e
 rm -f /myapp/tmp/pids/server.pid
 
 # For production
+if [ $RAILS_ENV = "production" ]; then
 bundle exec rake assets:precompile
+fi
 
 bin/rake db:create db:migrate db:seed
 

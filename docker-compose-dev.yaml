@@ -1,0 +1,34 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: 'postgres'
+    ports:
+      - "5432:5432"
+  web:
+    build: .
+    environment:
+      - GITHUB_ID
+      - GITHUB_SECRET
+      # - WEBPACKER_DEV_SERVER_HOST=webpacker
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - webpacker
+      - db
+
+  webpacker:
+    build: .
+    environment:
+      - GITHUB_ID
+      - GITHUB_SECRET
+      # - WEBPACKER_DEV_SERVER_HOST=0.0.0.0
+    command: bash -c "rm -f tmp/cache/webpacker/last-compilation-digest-development ;rm -rf /myapp/public/packs; /myapp/bin/webpack-dev-server"
+    volumes:
+      - .:/myapp/
+    ports:
+      - "3035:3035"
