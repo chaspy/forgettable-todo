@@ -2,7 +2,7 @@
   "name": "forgettable_todo",
   "private": true,
   "dependencies": {
-    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-react": "^7.12.5",
     "@babel/preset-typescript": "^7.9.0",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
