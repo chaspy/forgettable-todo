@@ -2,8 +2,8 @@
   "name": "forgettable_todo",
   "private": true,
   "dependencies": {
-    "@babel/preset-react": "^7.9.4",
-    "@babel/preset-typescript": "^7.9.0",
+    "@babel/preset-react": "7.17.12",
+    "@babel/preset-typescript": "7.17.12",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
@@ -26,9 +26,9 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "babel-loader": "^8.1.0",
+    "@babel/core": "7.18.5",
+    "@babel/preset-env": "7.18.2",
+    "babel-loader": "8.2.5",
     "webpack-dev-server": "^3.10.3"
   }
 }
